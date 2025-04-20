@@ -5,7 +5,7 @@ import java.io.IOException;
 public class LeitorArquivos {
     private static final String NOME_ARQUIVO = "alunosOrdenados.txt";
     
-    LeitorArquivos() {
+    void leArquivo() {
         try (BufferedReader reader = new BufferedReader(new FileReader(NOME_ARQUIVO))) {
             int numRegistros = Integer.parseInt(reader.readLine().trim());
             System.out.println("Número de registros: " + numRegistros);
@@ -26,7 +26,7 @@ public class LeitorArquivos {
         }
     }
 
-    LeitorArquivos(ListaEncadeadaComComparator lista) {
+    void leArquivo(ListaEncadeadaComComparator lista) {
         try (BufferedReader reader = new BufferedReader(new FileReader(NOME_ARQUIVO))) {
             int numRegistros = Integer.parseInt(reader.readLine().trim());
             System.out.println("Número de registros: " + numRegistros);

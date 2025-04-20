@@ -5,10 +5,12 @@ class Main{
         ListaEncadeadaComComparator<Aluno> lista = new ListaEncadeadaComComparator<>(true, new ComparadorAlunoPorNome());
         ListaEncadeadaComComparator<Aluno> lista2 = new ListaEncadeadaComComparator<>(false, new ComparadorAlunoPorNome());
         
-        GeradorArquivosOrdenados g = new GeradorArquivosOrdenados();
+        GeradorArquivosOrdenados gerador = new GeradorArquivosOrdenados();
 
-        LeitorArquivos l = new LeitorArquivos(lista);
-        LeitorArquivos l2 = new LeitorArquivos(lista2);
+        LeitorArquivos leitor = new LeitorArquivos();
+
+        leitor.leArquivo(lista);
+        leitor.leArquivo(lista2);
 
         System.out.println(lista);
 

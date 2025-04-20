@@ -68,10 +68,10 @@ class ListaEncadeadaComComparator<T> {
                 this.inicio = novo; //e o novo No sera o primeiro elemento da lista
             }
 
-            //se o atual for null, ento o novo elemento eh o maior da lista
+            //se o atual for null, entao o novo elemento eh o maior da lista
             else if(atual == null) {
                 this.fim.setProximo(novo); //o antigo elemento aponta para o novo No
-                this.fim = atual; //e o novo No sera o ultimo
+                this.fim = novo; //e o novo No sera o ultimo
             }
 
             //por fim, se as condicoes anteriores forem falsas, coloca-se o novo No na posicao adequada (entre o anterior
@@ -152,7 +152,7 @@ class ListaEncadeadaComComparator<T> {
             s += aux.getValor();
             
             if(aux != this.fim) {
-                s += ", ";
+                s += ";";
             }
 
             aux  = aux.getProximo();

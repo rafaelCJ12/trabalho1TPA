@@ -3,10 +3,10 @@
 class Aluno {
     private String nome;
     private int matricula;
-    private int nota;
+    private double nota;
 
 
-    Aluno(int m, String n, int nt) {
+    Aluno(int m, String n, float nt) {
         this.nome = n;
         this.matricula = m;
         this.nota = nt;
@@ -14,7 +14,7 @@ class Aluno {
 
     
     public String toString() {
-        return "\nNOME: " + this.nome + "\nMATRICULA: " + Integer.toString(this.matricula)+ "\nNOTA: " + Integer.toString(this.nota)+"\n";
+        return  "\nMATRICULA: " + Integer.toString(this.matricula)+ " | NOME: " + this.nome + " | NOTA: " + Double.toString(this.nota)+"\n";
     }
     
 

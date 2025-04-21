@@ -5,7 +5,7 @@ public class Main{
     //metodo que faz a busca na lista
     private static void buscaLista(ListaEncadeadaComComparator lista, Entrada e, Aluno a) {
         int matricula = -1;
-        long inicio = 0;
+        double inicio = 0;
 
         try {
             //tenta ler uma matricula
@@ -57,11 +57,17 @@ public class Main{
         ListaEncadeadaComComparator<Aluno> listaOrd = new ListaEncadeadaComComparator<Aluno>(true, new ComparadorAlunoPorMatricula());
         ListaEncadeadaComComparator<Aluno> listaNaoOrd = new ListaEncadeadaComComparator<Aluno>(false, new ComparadorAlunoPorMatricula());
         GeradorArquivosOrdenados gerador = new GeradorArquivosOrdenados();
+        double inicio = 0;
         LeitorArquivos leitor = new LeitorArquivos();
         Aluno a = new Aluno(0, "", 0);
 
+        inicio = System.nanoTime();
         leitor.leArquivo(listaOrd);
+        System.out.println("Tempo para criar a lista ordenada: " + ((System.nanoTime() - inicio) / 1000000) + " ms.");
+        
+        inicio = System.nanoTime();
         leitor.leArquivo(listaNaoOrd);
+        System.out.println("Tempo para criar a lista nao ordenada: " + ((System.nanoTime() - inicio) / 1000000) + " ms.");
 
         while(opcao != 0) {
             try{

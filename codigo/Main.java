@@ -22,9 +22,9 @@ public class Main{
                 
             }
 
-            inicio = System.currentTimeMillis();
-            a = (Aluno) lista.pesquisar(a); //retorna um objeto da classe 
-            inicio =  System.currentTimeMillis() - inicio;
+            inicio = System.nanoTime();
+            a = (Aluno) lista.pesquisar(a); //retorna um objeto da classe Aluno
+            inicio =  (System.nanoTime() - inicio) / 1000000;
 
             //se um aluno foi encontrado entao ele nao eh um objeto que aponta para null
             if(a != null) {
@@ -66,7 +66,7 @@ public class Main{
         while(opcao != 0) {
             try{
                 System.out.println("\nOla! Escolha uma opcao:");
-                System.out.println("\n1) Pesquisar aluno na lista nao oredenada.");
+                System.out.println("\n1) Pesquisar aluno na lista nao ordenada.");
                 System.out.println("2) Pesquisar aluno na lista ordenada.");
                 System.out.println(("0) Sair."));
 
@@ -80,6 +80,7 @@ public class Main{
                         buscaLista(listaOrd, entrada, a);
                         break;
                     case 0:
+                        System.out.println("Adeus!");
                         break;
                 
                     default:

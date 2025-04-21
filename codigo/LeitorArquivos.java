@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import bibliotecaLista.ListaEncadeadaComComparator;
+
 
 public class LeitorArquivos {
     private static final String NOME_ARQUIVO = "alunosOrdenados.txt";

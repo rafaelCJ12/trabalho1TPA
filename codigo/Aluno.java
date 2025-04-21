@@ -25,4 +25,8 @@ class Aluno {
     int getMatricula() {
         return this.matricula;
     }
+
+    void setMatricula(int m) {
+        this.matricula = m;
+    }
 }

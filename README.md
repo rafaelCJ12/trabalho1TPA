@@ -25,8 +25,7 @@ Este projeto em Java simula um sistema de gerenciamento de alunos utilizando lis
 ```
 
 ## 🛠 Tecnologias Utilizadas
-- **Java (JDK 8+)** (linguagem de programação)
-- **JVM**
+- **Java** (linguagem de programação)
 - Estrutura de dados: Lista Encadeada
 
 ## ▶️ Como Executar o Programa
